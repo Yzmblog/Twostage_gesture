@@ -1,0 +1,39 @@
+name: base
+
+base_path: /mnt/lustressd/yuzhengming/data/S2G
+
+
+model_save_path: /mnt/lustressd/yuzhengming/output/normalization/
+random_seed: -1
+
+
+
+# model params
+model: baseline
+
+# n_layers: 4
+# hidden_size: 300
+# z_type: speaker  # speaker, random, none
+# input_context: both  # both, audio, text, none
+
+# train params
+num_epochs: 100
+batch_size: 128
+learning_rate: 0.0005
+loss_regression_weight: 500
+loss_gan_weight: 5.0
+loss_warmup: 10
+loss_kld_weight: 0.1
+loss_reg_weight: 0.05
+
+# eval params
+eval_net_path: /mnt/lustressd/yuzhengming/output/gesture_autoencoder/gesture_autoencoder_checkpoint_best.bin
+
+# dataset params
+# motion_resampling_framerate: 15
+n_poses: 64
+n_pre_poses: 4
+# subdivision_stride: 10
+num_workers: 4
+
+## n_poses:生成帧数 n_pre_poses:前n个输入帧

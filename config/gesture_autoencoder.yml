@@ -1,0 +1,23 @@
+name: gesture_autoencoder
+
+base_path: /mnt/lustressd/yuzhengming/data/S2G
+
+
+model_save_path: /mnt/lustressd/yuzhengming/output/gesture_autoencoder/ellen/
+random_seed: -1
+
+# model params
+model: gesture_autoencoder
+
+
+# train params
+num_epochs: 500
+batch_size: 128
+learning_rate: 0.0005
+
+# dataset params
+# motion_resampling_framerate: 15
+n_poses: 64
+# n_pre_poses: 4
+# subdivision_stride: 5
+num_workers: 4
